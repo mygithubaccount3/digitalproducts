@@ -1,0 +1,142 @@
+.services {
+  @extend .d-flex, .flex-column, .flex-md-row, .col-12;
+  margin: 121px auto auto;
+
+  &__popular {
+    @extend .d-flex, .flex-column, .flex-md-row, .p-0;
+    flex-wrap: wrap;
+
+    & > .services__item:first-child {
+      @extend .col-md-6;
+    }
+
+    & > .services__item:nth-child(2) {
+      padding-left: 1px;
+    }
+  }
+
+  &__all {
+    @extend .align-items-center, .d-flex, .flex-column, .position-relative;
+    background-image: url("/digitalproducts/dist/assets/img/all-services.png");
+    background-size: 100% 100%;
+    padding-top: 115px;
+    width: 100%;
+
+    &::after {
+      @extend .d-block, .position-absolute;
+      content: "";
+      background-color: #9f9acf;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+
+    & > img {
+      z-index: 5;
+    }
+  }
+
+  &__item {
+    @extend .align-items-center, .flex-md-column, .d-inline-flex, .flex-column, .flex-md-row;
+    padding-top: 98px;
+    padding-bottom: 97px;
+
+    & > img {
+      width: 12%;
+      height: auto;
+    }
+
+    &:nth-child(2) {
+      & > img {
+        width: 15.3%;
+      }
+
+      & > .services__title {
+        margin-top: 26px;
+      }
+    }
+
+    &:nth-child(1), &:nth-child(4) {
+      background-color: #dbdbdb;
+    }
+
+    &:nth-child(3) {
+      @extend .col-md-6;
+      padding-top: 88px;
+      width: 50%;
+    }
+
+    &:nth-child(4) {
+      padding-top: 84px;
+      padding-bottom: 129px;
+
+      & > img {
+        width: 9.5%;
+      }
+    }
+  }
+
+  &__title {
+    @extend .text-uppercase, .font-weight-bold;
+    color: #665f60;
+    font-family: "PT Sans", sans-serif;
+    margin-top: 28px;
+    font-size: 24px;
+    text-align: center;
+
+    &--all {
+      color: #fefcfd;
+      font-family: ProximaNova;
+      font-size: 36px;
+      font-weight: 400;
+      margin-top: 27px;
+      margin-bottom: 104px;
+      text-transform: uppercase;
+      z-index: 5;
+    }
+  }
+
+  &__description {
+    @extend .font-italic, .text-center;
+    color: #665f60;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+    width: 53%;
+
+    &--all {
+      @extend .font-italic;
+      color: #fefcfd;
+      font-family: "PT Sans", sans-serif;
+      font-size: 18px;
+      width: 86%;
+      z-index: 5;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    padding-left: 17px;
+
+    &__popular {
+      width: 66.5%;
+    }
+
+    &__all {
+      width: 36%;
+    }
+
+    &__item {
+      width: 49.8%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    margin-top: 16px;
+  }
+}

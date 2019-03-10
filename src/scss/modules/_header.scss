@@ -1,0 +1,130 @@
+.header {
+  @extend .position-relative;
+  background-image: url("/digitalproducts/dist/assets/img/header-bg-overlay.png");
+  background-position: center;
+  background-size: 133% 100%;
+
+  &::after {
+    @extend .d-block, .position-absolute;
+    content: "";
+    background-color: #9f9acf;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  &__navbar {
+    @extend .navbar, .navbar-expand-md, .navbar-light, .flex-md-column, .flex-lg-row, .justify-content-md-between, .w-100;
+    margin: auto;
+    padding-left: 45px !important;
+    background-color: #9f9acf;
+    opacity: 0.7;
+    z-index: 6;
+
+    &-wrapper {
+      @extend .collapse, .navbar-collapse
+    }
+  }
+
+  &__brand {
+    @extend .d-none, .d-md-inline, .navbar-brand, .navbar-light;
+  }
+
+  &__nav {
+    @extend .navbar-nav, .justify-content-md-center, .justify-content-lg-between, .flex-row;
+    margin-top: -6px;
+
+    &-wrapper {
+      width: 51.5%;
+    }
+  }
+
+  &__item {
+    width: 20%;
+  }
+
+  &__link {
+    @extend .text-white, .text-uppercase;
+    font-family: ProximaNova, sans-serif;
+    font-size: 24px;
+    line-height: 60.03px;
+  }
+
+  &__content {
+    @extend .d-flex, .flex-column, .align-items-center;
+  }
+
+  &__title {
+    @extend .text-white, .text-uppercase, .font-weight-bold;
+    color: #fefefb;
+    font-family: ProximaNova, sans-serif;
+    font-size: 72px;
+    letter-spacing: -0.5px;
+    line-height: 72px;
+    z-index: 5;
+  }
+
+  &__description {
+    @extend .font-italic;
+    color: #fefdfd;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+    z-index: 5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__navbar {
+      position: relative;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__content {
+      padding-top: 135px;
+    }
+
+    &__nav-wrapper {
+      width: 100%;
+    }
+
+    &__nav {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 32%;
+    }
+
+    &__link {
+      font-size: 17px;
+    }
+
+    &__description {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__navbar {
+      padding-top: 30px !important;
+      position: fixed !important;
+    }
+
+    &__content {
+      padding-top: 399px;
+      padding-bottom: 485px;
+    }
+
+    &__item {
+      width: 20%;
+    }
+  }
+}

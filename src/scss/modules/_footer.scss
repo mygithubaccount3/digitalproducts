@@ -1,0 +1,23 @@
+footer {
+  @extend .flex-column, .flex-md-row;
+  background-color: #9f9acf;
+  display: flex !important;
+  justify-content: space-between;
+  padding-left: 52px;
+  padding-top: 77px;
+  padding-bottom: 82px;
+
+  & > span {
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+  }
+
+  & > div {
+    width: 26%;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,59 @@
+.works {
+  background-image: url("/digitalproducts/dist/assets/img/works-bg.png");
+  padding-top: 49px;
+  padding-bottom: 60px;
+
+  & > img {
+    @extend .d-block;
+    margin: auto;
+  }
+
+  &__title {
+    @extend .text-uppercase, .font-weight-normal, .col-sm-3;
+    color: #fefcfd;
+    font-family: ProximaNova;
+    font-size: 36px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &__slider {
+    margin: auto;
+    margin-top: 57px;
+    margin-bottom: 76px !important;
+    width: 61%;
+  }
+
+  &__link {
+    @extend .text-white, .font-italic, .d-block, .text-md-center;
+    border: 1px solid white;
+    font-family: "PT Sans";
+    font-size: 20px;
+    margin: auto;
+    padding-top: 7px;
+    padding-bottom: 11px;
+    width: 16.2%;
+  }
+}
+
+.slick-dots {
+  @extend .d-none, .d-md-block;
+  position: relative !important;
+  top: 35px;
+  bottom: 0 !important;
+  margin: auto !important;
+  width: 11% !important;
+
+  & li {
+    margin: 0 !important;
+
+    & button::before {
+      width: 20px !important;
+    }
+  }
+
+  & li button:before {
+    font-size: 35px !important;
+  }
+}
