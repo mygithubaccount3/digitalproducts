@@ -1,1 +1,1 @@
-gh-pages: https://mygithubaccount3.github.io/digitalproducts/
+gh-pages: https://mygithubaccount3.github.io/digitalproducts/dist
