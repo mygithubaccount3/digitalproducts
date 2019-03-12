@@ -1,23 +1,25 @@
 footer {
-  @extend .flex-column, .flex-md-row;
+  @extend .d-flex, .justify-content-between, .flex-column, .flex-md-row;
   background-color: #9f9acf;
-  display: flex !important;
-  justify-content: space-between;
   padding-left: 52px;
   padding-top: 77px;
   padding-bottom: 82px;
 
   & > span {
-    color: #ffffff;
-    font-family: "PT Sans";
-    font-size: 18px;
-    font-weight: 400;
+    @extend .text-white;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.125rem;
     letter-spacing: 0.36px;
   }
 
   & > div {
+    @extend .d-inline-flex, .justify-content-between;
     width: 26%;
-    display: inline-flex;
-    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer > div {
+    width: 83%;
   }
 }

@@ -9,28 +9,24 @@
   }
 
   &__title {
-    @extend .text-uppercase, .font-weight-normal, .col-sm-3;
+    @extend .text-uppercase, .font-weight-normal, .col-sm-3, .text-center;
     color: #fefcfd;
-    font-family: ProximaNova;
-    font-size: 36px;
-    margin: auto;
-    margin-top: 30px;
-    text-align: center;
+    font-family: ProximaNova, sans-serif;
+    font-size: 2.25rem;
+    margin: 30px auto auto;
   }
 
   &__slider {
-    margin: auto;
-    margin-top: 57px;
-    margin-bottom: 76px !important;
+    margin: 57px auto 76px;
     width: 61%;
   }
 
   &__link {
     @extend .text-white, .font-italic, .d-block, .text-md-center;
     border: 1px solid white;
-    font-family: "PT Sans";
-    font-size: 20px;
-    margin: auto;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.25rem;
+    margin: 76px auto auto;
     padding-top: 7px;
     padding-bottom: 11px;
     width: 16.2%;
@@ -38,22 +34,40 @@
 }
 
 .slick-dots {
-  @extend .d-none, .d-md-block;
-  position: relative !important;
+  @extend .d-none, .d-md-block, .position-relative;
   top: 35px;
-  bottom: 0 !important;
-  margin: auto !important;
-  width: 11% !important;
+  bottom: 0;
+  margin: auto;
+  width: 11%;
 
   & li {
-    margin: 0 !important;
+    margin: 0;
 
     & button::before {
-      width: 20px !important;
+      width: 20px;
     }
   }
 
   & li button:before {
-    font-size: 35px !important;
+    font-size: 2.188rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .works {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__slider, &__link {
+      margin-top: 0;
+    }
+
+    &__link {
+      width: 33%;
+    }
   }
 }

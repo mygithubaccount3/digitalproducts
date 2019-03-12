@@ -9,7 +9,7 @@
     width: 56.8%;
     color: #665f60;
     font-family: "PT Sans", sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding-top: 71px;
 
     & > p:nth-of-type(2) {
@@ -24,7 +24,7 @@
       border: 1px solid #7d7a7c;
       color: #7d7a7c;
       font-family: "PT Sans", sans-serif;
-      font-size: 20px;
+      font-size: 1.25rem;
       margin-top: 77px;
       margin-left: -26px;
       width: 29.4%;
@@ -34,17 +34,23 @@
   }
 
   & > img {
-    @extend .d-inline-flex;
+    @extend .d-none, .d-md-inline-flex;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .about-us {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .about-us__text {
     padding-top: 10px;
     width: 100%;
 
     & > a {
       margin-top: 0;
+      width: 35.4%;
     }
   }
 }

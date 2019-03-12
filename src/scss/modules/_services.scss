@@ -65,7 +65,6 @@
     &:nth-child(3) {
       @extend .col-md-6;
       padding-top: 88px;
-      width: 50%;
     }
 
     &:nth-child(4) {
@@ -79,21 +78,19 @@
   }
 
   &__title {
-    @extend .text-uppercase, .font-weight-bold;
+    @extend .text-uppercase, .font-weight-bold, .text-center;
     color: #665f60;
     font-family: "PT Sans", sans-serif;
     margin-top: 28px;
-    font-size: 24px;
-    text-align: center;
+    font-size: 1.5rem;
 
     &--all {
+      @extend .text-uppercase;
       color: #fefcfd;
-      font-family: ProximaNova;
-      font-size: 36px;
-      font-weight: 400;
+      font-family: ProximaNova, sans-serif;
+      font-size: 2.25rem;
       margin-top: 27px;
       margin-bottom: 104px;
-      text-transform: uppercase;
       z-index: 5;
     }
   }
@@ -102,7 +99,7 @@
     @extend .font-italic, .text-center;
     color: #665f60;
     font-family: "PT Sans", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.3;
     width: 53%;
 
@@ -110,7 +107,7 @@
       @extend .font-italic;
       color: #fefcfd;
       font-family: "PT Sans", sans-serif;
-      font-size: 18px;
+      font-size: 1.125rem;
       width: 86%;
       z-index: 5;
     }
@@ -135,8 +132,26 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .services {
     margin-top: 16px;
+    margin-bottom: 5px;
+
+    &__item, &__item:nth-child(3), &__item:nth-child(4), &__all {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &__item:nth-child(3) {
+      background-color: #dbdbdb;
+    }
+
+    &__item:nth-child(4) {
+      background-color: #ebebeb;
+    }
+
+    &__title--all {
+      margin-bottom: 0;
+    }
   }
 }

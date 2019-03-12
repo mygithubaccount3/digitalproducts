@@ -1,13 +1,13 @@
 .team {
+  @extend .text-center;
   padding-top: 54px;
   padding-bottom: 98px;
-  text-align: center;
 
   &__title {
     @extend .text-uppercase;
     color: #665f60;
-    font-family: ProximaNova;
-    font-size: 36px;
+    font-family: ProximaNova, sans-serif;
+    font-size: 2.25rem;
     margin-top: 28px;
     margin-bottom: 59px;
   }
@@ -18,76 +18,53 @@
   }
 
   &__slide {
-    background-color: white;
-    text-align: center;
+    @extend .text-center, .bg-white;
 
     & > img {
       height: auto;
-      margin: auto;
-      margin-bottom: 49px;
+      margin: auto auto 49px;
       width: 67%;
     }
 
     & > h3 {
+      @extend .font-weight-bold, .text-uppercase;
       color: #9f9acf;
-      font-family: ProximaNova;
-      font-size: 24px;
-      font-weight: 700;
+      font-family: ProximaNova, sans-serif;
+      font-size: 1.5rem;
       margin-bottom: 19px;
-      text-transform: uppercase;
     }
 
     & > p {
+      @extend .font-italic;
       color: #665f60;
-      font-family: "PT Sans";
-      font-size: 24px;
-      font-style: italic;
+      font-family: "PT Sans", sans-serif;
+      font-size: 1.5rem;
       margin-bottom: 42px;
     }
 
     & > div {
       background-color: #9f9acf;
-      padding-top: 23px;
-      padding-bottom: 23px;
+      padding-top: 20px;
+      padding-bottom: 20px;
 
       & > div {
-        display: flex;
+        @extend .d-flex, .justify-content-between;
         width: 48%;
         margin: auto;
-        justify-content: space-between;
       }
     }
   }
 
   &__icon {
+    @extend .d-inline-block, .text-center;
     background-color: #ebebeb;
     border-radius: 50%;
-    color: #9f9acf;
-    display: inline-block;
+    height: 30px;
+    width: 30px;
 
-    &--bh {
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-
-    &--ln {
-      padding-right: 9px;
-      padding-left: 9px;
-    }
-
-    &--gp {
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-
-    &--fb {
-      padding-right: 11px;
-      padding-left: 11px;
-    }
-
-    &--tw {
-      padding-right: 8px;
-      padding-left: 8px;
+    & > i {
+      @extend .align-middle;
+      color: #9f9acf;
     }
   }
 
@@ -95,8 +72,23 @@
     margin: 0 16px;
   }
 
-  /* the parent */
   & .slick-list {
     margin: 0 -16px;
+  }
+
+  & .slick-prev, & .slick-next {
+    top: -13px;
+
+    &::before {
+      color: #665f60;
+    }
+  }
+
+  & .slick-next {
+    right: 0;
+  }
+
+  & .slick-prev {
+    left: 0;
   }
 }
