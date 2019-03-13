@@ -19,11 +19,11 @@ html {
 @import "functions";
 @import "variables";
 
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+@import "../../mixins/Bootstrap/breakpoints";
+@import "../../mixins/Bootstrap/grid-framework";
+@import "../../mixins/Bootstrap/grid";
 
 @import "grid";
-@import "utilities/display";
-@import "utilities/flex";
-@import "utilities/spacing";
+@import "display";
+@import "flex";
+@import "spacing";

@@ -16,21 +16,16 @@
   }
 
   &__all {
-    @extend .align-items-center, .d-flex, .flex-column, .position-relative;
+    @extend .align-items-center, .d-flex, .flex-column;
     background-image: url("/digitalproducts/dist/assets/img/all-services.png");
     background-size: 100% 100%;
     padding-top: 115px;
+    position: relative;
     width: 100%;
 
     &::after {
-      @extend .d-block, .position-absolute;
-      content: "";
-      background-color: #9f9acf;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0.5;
+      @extend .d-block;
+      @include overlay(#9f9acf, 0.5)
     }
 
     & > img {
@@ -82,13 +77,13 @@
     color: #665f60;
     font-family: "PT Sans", sans-serif;
     margin-top: 28px;
-    font-size: 1.5rem;
+    font-size: rem(24);
 
     &--all {
       @extend .text-uppercase;
       color: #fefcfd;
       font-family: ProximaNova, sans-serif;
-      font-size: 2.25rem;
+      font-size: rem(36);
       margin-top: 27px;
       margin-bottom: 104px;
       z-index: 5;
@@ -99,7 +94,7 @@
     @extend .font-italic, .text-center;
     color: #665f60;
     font-family: "PT Sans", sans-serif;
-    font-size: 1.125rem;
+    font-size: rem(18);
     line-height: 1.3;
     width: 53%;
 
@@ -107,7 +102,7 @@
       @extend .font-italic;
       color: #fefcfd;
       font-family: "PT Sans", sans-serif;
-      font-size: 1.125rem;
+      font-size: rem(18);
       width: 86%;
       z-index: 5;
     }

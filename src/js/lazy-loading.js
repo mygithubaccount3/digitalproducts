@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = [].slice.call(document.querySelectorAll(".about-us>img, .services__item>img, .services__all>img, .works>img, .team>img, .team__slide>img, .contact__form>img"));
+    let lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
     let active = false;
 
     const lazyLoad = function() {

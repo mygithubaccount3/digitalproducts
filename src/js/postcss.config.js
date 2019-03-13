@@ -1,10 +1,10 @@
 // npm install postcss-loader autoprefixer css-mqpacker cssnano --save-dev
 
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-    require('css-mqpacker'),
-    require('cssnano')({
+  plugins: {
+    /*require('autoprefixer'),
+    require('css-mqpacker'),*/
+    /*require('cssnano')({
       preset: [
         'default', {
           discardComments: {
@@ -12,6 +12,9 @@ module.exports = {
           }
         }
       ]
-    })
-  ]
+    })*/
+    'autoprefixer': {},
+    'css-mqpacker': {},
+    'cssnano': {}
+  }
 };

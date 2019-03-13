@@ -8,23 +8,14 @@
   @extend .position-relative;
 
   &::after {
-    @extend .d-block, .position-absolute;
-    background-color: #9f9acf;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.4;
+    @extend .d-block;
+    @include overlay(#9f9acf, 0.4)
   }
 
   &__form {
-    @extend .position-absolute, .text-center;
+    @extend .text-center;
+    @include overlay(unset, unset);
     padding-top: 55px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     overflow-x: hidden;
     z-index: 5;
 
@@ -37,32 +28,29 @@
   &__title {
     @extend .text-uppercase, .text-white;
     font-family: ProximaNova, sans-serif;
-    font-size: 2.25rem;
+    font-size: rem(36);
     margin-bottom: 260px;
   }
 
   &__address, &__numbers {
-    @extend .position-absolute, .d-none, .d-md-block;
+    @extend .position-absolute;
     background-color: #ebebeb;
-    top: 24.5%;
-    right: 0;
-    text-align: left;
-    transform: translateX(81%);
-    width: 40%;
+    right: -105px;
+    transition: right 1s ease-in-out;
+    z-index: 10;
+
+    @include respond-to(middleSmartphone) {
+      display: none;
+    }
 
     &:hover {
-      animation: sweep 0.5s linear;
-      animation-fill-mode: forwards;
+      right: 0;
     }
 
     & > div:first-child {
+      @extend .d-inline-block, .align-top;
       background-color: #9f9acf;
-      display: inline-block;
-      padding-top: 43px;
-      padding-bottom: 24px;
-      padding-right: 29px;
-      padding-left: 27px;
-      vertical-align: top;
+      padding: 43px 29px 24px 27px;
 
       &::after {
         content: "";
@@ -73,33 +61,52 @@
     }
 
     & > div:last-child {
-      display: inline-block;
-      text-align: center;
-      width: 50%;
-
+      @extend .d-inline-block, .text-center;
+      width: 100px;
       color: #665f60;
       font-family: "PT Sans", sans-serif;
-      font-size: 18px;
+      font-size: rem(18);
+    }
+  }
+
+  &__address {
+    top: 24.2%;
+    right: -155px;
+
+    & > div:last-child {
+      width: 150px;
     }
   }
 
   &__numbers {
-    top: 34.61%;
+    top: 34.3%;
 
     & > div:first-child {
-      padding-right: 36px;
+      padding-right: 39px;
       padding-left: 35px;
 
       &::after {
         content: "";
         background-image: url("/digitalproducts/dist/assets/img/icon-numbers.png");
-        padding-top: 17px;
+        padding-top: 15px;
         padding-left: 20px;
       }
     }
-
-
+    @include respond-to(smallScreen) {
+      top: 43.3%;
     }
+    }
+
+  &__message {
+    @extend .d-md-block, .position-absolute, .bg-white, .w-25, .d-none;
+    opacity: 0;
+    top: 42%;
+    left: 38%;
+    border-radius: 25px;
+    margin: auto auto 10px;
+    transition: opacity 1s linear;
+  }
+
   }
 
 .form-group {
@@ -134,14 +141,14 @@
   background-color: #9f9acf;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
   font-family: ProximaNova, sans-serif;
-  font-size: 1.25rem;
+  font-size: rem(20);
   line-height: 26.19px;
   letter-spacing: 0.3px;
 }
 
-@media screen and (max-width: 768px) {
+@include respond-to(smallScreen){
   .btn {
-    font-size: 0.6875rem;
+    font-size: rem(11);
     margin-top: 8px;
     width: 35.5%;
   }
@@ -159,13 +166,8 @@
   #contact__map {
     height: 475px;
   }
-}
 
-@keyframes sweep {
-  0% {
-
-  }
-  100% {
-    transform: translateX(0);
+  .contact__message {
+    top: 60%;
   }
 }

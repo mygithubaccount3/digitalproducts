@@ -1,14 +1,12 @@
 footer {
-  @extend .d-flex, .justify-content-between, .flex-column, .flex-md-row;
+  @extend .d-flex, .justify-content-between, .flex-column, .flex-md-row, .w-100;
   background-color: #9f9acf;
-  padding-left: 52px;
-  padding-top: 77px;
-  padding-bottom: 82px;
+  padding: 77px 52px 82px;
 
   & > span {
     @extend .text-white;
     font-family: "PT Sans", sans-serif;
-    font-size: 1.125rem;
+    font-size: rem(18);
     letter-spacing: 0.36px;
   }
 
@@ -18,7 +16,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@include respond-to(smallScreen){
   footer > div {
     width: 83%;
   }

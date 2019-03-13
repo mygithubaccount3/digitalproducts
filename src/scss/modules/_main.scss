@@ -3,7 +3,7 @@ main {
   padding-top: 124px;
 }
 
-@media screen and (max-width: 768px) {
+@include respond-to(smallScreen){
   main {
     padding-top: 10px;
   }

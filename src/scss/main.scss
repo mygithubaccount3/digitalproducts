@@ -1,4 +1,6 @@
-@import "utils/bootstrap";
+@import "utils/utilities/bootstrap/bootstrap";
+@import "utils/utilities/variables";
+@import "utils/mixins/mixins";
 @import "modules/header";
 @import "modules/main";
 @import "modules/about-us";
@@ -25,3 +27,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i');
+
+* {
+  outline: none;
+}

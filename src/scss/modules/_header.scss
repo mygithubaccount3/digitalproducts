@@ -5,14 +5,8 @@
   background-size: 133% 100%;
 
   &::after {
-    @extend .d-block, .position-absolute;
-    content: "";
-    background-color: #9f9acf;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
+    @extend .d-block;
+    @include overlay(#9f9acf, 0.5)
   }
 
   &__navbar {
@@ -35,11 +29,6 @@
   &__nav {
     @extend .navbar-nav, .justify-content-md-center, .justify-content-lg-between;
     margin-top: -6px;
-
-    &-wrapper {
-      /*@extend .collapse, .navbar-collapse;*/
-      /*width: 51.5%;*/
-    }
   }
 
   &__item {
@@ -50,7 +39,7 @@
   &__link {
     @extend .nav-link, .text-white, .text-uppercase;
     font-family: ProximaNova, sans-serif;
-    font-size: 1.5rem;
+    font-size: rem(24);
     line-height: 1.5;
   }
 
@@ -62,7 +51,7 @@
     @extend .text-uppercase, .font-weight-bold;
     color: #fefefb;
     font-family: ProximaNova, sans-serif;
-    font-size: 4.5rem;
+    font-size: rem(72);
     letter-spacing: -0.5px;
     line-height: 72px;
     z-index: 5;
@@ -72,7 +61,7 @@
     @extend .font-italic, .text-center;
     color: #fefdfd;
     font-family: 'PT Sans', sans-serif;
-    font-size: 1.875rem;
+    font-size: rem(30);
     width: 50%;
     z-index: 5;
   }
@@ -107,7 +96,7 @@
     }
 
     &__link {
-      font-size: 0.875rem;
+      font-size: rem(14);
     }
 
     &__description {
@@ -115,7 +104,7 @@
     }
 
     &__title {
-      font-size: 1.375rem;
+      font-size: rem(22);
       margin-bottom: 0;
     }
   }
@@ -146,7 +135,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@include respond-to(tablet){
   .header {
     &__content {
       padding: 130px 16px 35px;

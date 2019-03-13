@@ -12,7 +12,7 @@
     @extend .text-uppercase, .font-weight-normal, .col-sm-3, .text-center;
     color: #fefcfd;
     font-family: ProximaNova, sans-serif;
-    font-size: 2.25rem;
+    font-size: rem(36);
     margin: 30px auto auto;
   }
 
@@ -25,7 +25,7 @@
     @extend .text-white, .font-italic, .d-block, .text-md-center;
     border: 1px solid white;
     font-family: "PT Sans", sans-serif;
-    font-size: 1.25rem;
+    font-size: rem(20);
     margin: 76px auto auto;
     padding-top: 7px;
     padding-bottom: 11px;
@@ -49,7 +49,7 @@
   }
 
   & li button:before {
-    font-size: 2.188rem;
+    font-size: rem(35);
   }
 }
 
