@@ -35,6 +35,7 @@
   &__address, &__numbers {
     @extend .position-absolute;
     background-color: #ebebeb;
+    cursor: pointer;
     right: -105px;
     transition: right 1s ease-in-out;
     z-index: 10;
