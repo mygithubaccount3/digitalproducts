@@ -71,7 +71,7 @@
   }
 
   &__address {
-    top: 24.2%;
+    top: 180px;
     right: -155px;
 
     & > div:last-child {
@@ -80,7 +80,7 @@
   }
 
   &__numbers {
-    top: 34.3%;
+    top: 271px;
 
     & > div:first-child {
       padding-right: 39px;
@@ -93,10 +93,7 @@
         padding-left: 20px;
       }
     }
-    @include respond-to(smallScreen) {
-      top: 43.3%;
-    }
-    }
+  }
 
   &__message {
     @extend .d-md-block, .position-absolute, .bg-white, .w-25, .d-none;
