@@ -27,8 +27,8 @@
 
   &__item {
     @extend .align-items-center, .flex-md-column, .d-inline-flex, .flex-column, .flex-md-row, .col-md-6;
-    padding-top: 98px;
-    padding-bottom: 97px;
+    padding-top: 103px;
+    padding-bottom: 87px;
 
     & > img {
       width: 12%;
@@ -36,10 +36,11 @@
     }
 
     &:nth-child(2) {
-      padding-left: 1px;
+      padding-top: 98px;
+      padding-left: 14px;
 
       & > img {
-        width: 15.3%;
+        width: 16.5%;
       }
 
       & > .services__title {
@@ -52,12 +53,17 @@
     }
 
     &:nth-child(3) {
-      padding-top: 88px;
+      padding-top: 82px;
+      padding-left: 10px;
+
+      & > img {
+        width: 13%;
+      }
     }
 
     &:nth-child(4) {
       padding-top: 84px;
-      padding-bottom: 129px;
+      padding-bottom: 116px;
 
       & > img {
         width: 9.5%;
