@@ -1,18 +1,22 @@
 $(document).ready(function(){
     $('.works__slider').slick({
+        lazyLoad: 'ondemand',
         dots: true,
-        lazyLoad: 'ondemand'
+        dotsClass: 'dots'
     });
 
     $('.team__slider').slick({
         lazyLoad: 'ondemand',
         slidesToShow: 3,
         slidesToScroll: 1,
+        dotsClass: 'dots',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true
                 }
             },
             {

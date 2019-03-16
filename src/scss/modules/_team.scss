@@ -3,13 +3,17 @@
   padding-top: 54px;
   padding-bottom: 98px;
 
+  @include respond-to(smallScreen) {
+    padding-bottom: 40px;
+  }
+
   &__title {
     @extend .text-uppercase;
     color: #665f60;
     font-family: ProximaNova, sans-serif;
     font-size: rem(36);
     margin-top: 28px;
-    margin-bottom: 64px;
+    margin-bottom: 59px;
   }
 
   &__slider {
@@ -18,12 +22,20 @@
   }
 
   &__slide {
-    @extend .text-center, .bg-white;
+    @extend .text-center, .bg-white, .position-relative;
+    padding: 158px 0 0;
+    margin-top: 121px;
 
     & > img {
-      height: auto;
+      border: 10px solid #ebebeb;
+      border-radius: 50%;
+      height: 253px;
       margin: auto auto 49px;
-      width: 67%;
+      position: absolute;
+      top: -131px;
+      right: 0;
+      left: 0;
+      width: 253px;
     }
 
     & > h3 {
@@ -77,19 +89,31 @@
     margin: 0 -15px;
   }
 
-  & .slick-prev, & .slick-next {
-    top: -13px;
+  & .slick-prev::before, & .slick-next::before {
+    color: #665f60;
+    font-family: FontAwesome;
+    font-size: 50px;
+  }
+
+  & .slick-prev {
+    left: -37px;
 
     &::before {
-      color: #665f60;
+      content: '\f104';
     }
   }
 
   & .slick-next {
-    right: 0;
-  }
+    right: -37px;
 
-  & .slick-prev {
-    left: 0;
+    &::before {
+      content: '\f105';
+    }
+  }
+}
+
+.team .dots {
+  li button::before, .slick-active button::before {
+    color: #9f9acf;
   }
 }
