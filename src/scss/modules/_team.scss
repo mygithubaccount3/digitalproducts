@@ -76,8 +76,9 @@
     width: 30px;
 
     & > i {
-      @extend .align-middle;
       color: #9f9acf;
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
   }
 
