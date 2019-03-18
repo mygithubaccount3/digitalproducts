@@ -48,13 +48,14 @@
   }
 
   &__title {
-    @extend .text-uppercase, .font-weight-bold;
+    @extend .text-uppercase, .font-weight-bold, .text-center;
     color: #fefefb;
     font-family: ProximaNova, sans-serif;
     font-size: rem(72);
     letter-spacing: -0.5px;
     line-height: 72px;
     z-index: 5;
+    width: 80%;
   }
 
   &__description {
