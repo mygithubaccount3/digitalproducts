@@ -7,6 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const purgeCSS = require('purgecss-webpack-plugin');
 const glob = require('glob');
+const autoprefixer = require('autoprefixer');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -57,6 +58,13 @@ module.exports = {
           options: { sourceMap: true }
         },
         {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [autoprefixer()],
+            sourceMap: true
+          }
+        },
+        {
           loader: 'sass-loader',
           options: { sourceMap: true }
         }
@@ -66,8 +74,8 @@ module.exports = {
       use: [
         'style-loader',
         {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+          loader: 'css-loader',
+          options: { sourceMap: true }
         }
       ]
     }]
