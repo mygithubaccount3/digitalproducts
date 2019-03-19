@@ -119,7 +119,7 @@
   &-wrapper {
     @extend .d-flex, .justify-content-between;
     width: 71.7%;
-    margin: auto auto 23px;
+    margin: auto auto 16px;
     flex-wrap: wrap;
   }
 }
@@ -133,6 +133,7 @@
   @extend .font-weight-bold, .text-uppercase, .text-white;
   padding-top: 20px;
   padding-bottom: 20px;
+  min-width: 185px;
   width: 24.5%;
 
   background-color: #9f9acf;
@@ -144,16 +145,6 @@
 }
 
 @include respond-to(smallScreen){
-  .btn {
-    font-size: rem(11);
-    margin-top: 8px;
-    width: 35.5%;
-  }
-
-  .contact__form {
-    padding-top: 0;
-  }
-
   .contact__title, .form-group-wrapper, .form-group, .form-group:last-of-type {
     margin-bottom: 0;
   }
@@ -164,7 +155,32 @@
     height: 475px;
   }
 
+  .contact {
+    &__form {
+      padding-top: 5px;
+
+      & > img {
+        margin: auto auto 5px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+  }
+
+  .form-group-wrapper {
+    margin: auto;
+  }
+
   .contact__message {
     top: 60%;
+  }
+
+  .btn {
+    font-size: rem(11);
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

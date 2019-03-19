@@ -11,11 +11,9 @@
 
   &__navbar {
     @extend .navbar, .navbar-expand-md, .navbar-light, .w-100, .fixed-top;
-    margin: auto;
     padding-left: 45px;
     background-color: #9f9acf;
     opacity: 0.9;
-    z-index: 6;
 
     &-wrapper {
       @extend .collapse, .navbar-collapse
@@ -27,8 +25,9 @@
   }
 
   &__nav {
-    @extend .navbar-nav, .justify-content-md-center, .justify-content-lg-between;
+    @extend .navbar-nav;
     margin-top: -6px;
+    width: 97%;
   }
 
   &__item {
@@ -72,17 +71,12 @@
   .header {
     &__navbar {
       padding-left: 16px;
-      width: 100%;
     }
 
     &__content {
       padding-top: 80px;
       padding-right: 16px;
       padding-left: 16px;
-    }
-
-    &__nav-wrapper {
-      width: 100%;
     }
 
     &__nav {
@@ -113,12 +107,8 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    &__nav {
-      width: 70%;
-
-      &-wrapper {
-        justify-content: flex-end;
-      }
+    &__nav-wrapper {
+      justify-content: flex-end;
     }
 
     &__navbar {
@@ -140,10 +130,6 @@
   .header {
     &__content {
       padding: 130px 16px 35px;
-    }
-
-    &__nav {
-      width: 100%;
     }
   }
 }

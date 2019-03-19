@@ -9,7 +9,7 @@
   }
 
   @else if $media == smallScreen {
-    @media (max-device-width: $tabletPortrait) { @content; }
+    @media (max-width: $tabletPortrait) { @content; }
   }
 
   @else if $media == largePhone {
