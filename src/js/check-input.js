@@ -16,7 +16,7 @@
             }
         }
 
-        (fieldsChecked === 3) ? contactMessage.text('Form submitted').css({'color': 'green', 'opacity': '1'})
-                              : contactMessage.text('You have not fill out all fields').css({'color': 'red', 'opacity': '1'})
+        (fieldsChecked === 3) ? contactMessage.text('Form submitted').css({'color': 'green', 'opacity': '0.7'})
+                              : contactMessage.text('You have not fill out all fields').css({'color': 'red', 'opacity': '0.7'})
     })
 }) (jQuery);

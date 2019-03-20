@@ -96,16 +96,16 @@
   }
 
   &__message {
-    @extend .d-md-block, .position-absolute, .bg-white, .w-25, .d-none;
+    @extend .position-absolute, .bg-white;
+    display: block;
     opacity: 0;
     top: 42%;
-    left: 38%;
+    left: 36%;
     border-radius: 25px;
-    margin: auto auto 10px;
     transition: opacity 1s linear;
+    width: 28%;
   }
-
-  }
+}
 
 .form-group {
   @extend .d-inline-block;
@@ -179,9 +179,9 @@
     }
   }
 
-  /*.contact__message {
-    top: 60%;
-  }*/
+  .contact__message {
+    top: 1%;
+  }
 
   .btn {
     font-size: rem(11);
