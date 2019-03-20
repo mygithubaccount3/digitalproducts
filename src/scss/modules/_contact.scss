@@ -20,7 +20,7 @@
     z-index: 5;
 
     & > img {
-      @extend .d-block;
+      display: block;
       margin: auto auto 20px;
     }
   }
@@ -157,10 +157,10 @@
 
   .contact {
     &__form {
-      padding-top: 5px;
+      padding-top: 35px;
 
       & > img {
-        margin: auto auto 5px;
+        display: none;
       }
     }
 
@@ -169,8 +169,14 @@
     }
   }
 
-  .form-group-wrapper {
-    margin: auto;
+  .form-group {
+    &-wrapper {
+      margin: auto;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .contact__message {
@@ -179,7 +185,7 @@
 
   .btn {
     font-size: rem(11);
-    margin-top: 15px;
+    margin-top: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
   }

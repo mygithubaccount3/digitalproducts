@@ -19,12 +19,18 @@
   &__slider {
     margin: auto;
     width: 90%;
+    @include respond-to(smallScreen) {
+      width: 75%;
+    }
   }
 
   &__slide {
     @extend .text-center, .bg-white, .position-relative;
     padding: 158px 0 0;
     margin-top: 121px;
+    @include respond-to(smallScreen) {
+      padding: 80px 0 0;
+    }
 
     & > img {
       border: 10px solid #ebebeb;
@@ -36,6 +42,10 @@
       right: 0;
       left: 0;
       width: 253px;
+      @include respond-to(smallScreen) {
+        width: 200px;
+        height: 200px;
+      }
     }
 
     & > h3 {
@@ -63,6 +73,9 @@
         @extend .d-flex, .justify-content-between;
         width: 48%;
         margin: auto;
+        @include respond-to(smallScreen) {
+          width: 80%;
+        }
       }
     }
   }
