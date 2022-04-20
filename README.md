@@ -1,1 +1,1 @@
-Live: https://mygithubaccount3.github.io/digitalproducts/
+Live: https://mygithubaccount3.github.io/digitalproducts/dist/
